@@ -1,4 +1,4 @@
-name: tftest-baseline
+name: tftest-p2s-entra
 
 on:
   schedule:
