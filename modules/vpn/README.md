@@ -1,6 +1,3 @@
-# terraform-azurerm-network-vwan
-
-Poke
 <!-- BEGIN_TF_DOCS -->
 ## Requirements
 
