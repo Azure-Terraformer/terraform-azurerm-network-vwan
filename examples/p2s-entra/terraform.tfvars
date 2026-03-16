@@ -1,0 +1,7 @@
+application_name = "aztf-core-network"
+address_space    = "10.8.0.0/23"
+location         = "westus3"
+additional_regions = {
+  eastus2 = "10.8.2.0/23"
+}
+vpn_address_space = "10.10.0.0/24"
