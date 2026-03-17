@@ -18,3 +18,7 @@ variable "additional_regions" {
   type        = map(string)
   description = "A map of additional Azure regions where Virtual Hubs will be deployed, with each key as the region code and value as the region-specific address space."
 }
+variable "tags" {
+  description = "Tags for the resources"
+  type        = map(string)
+}

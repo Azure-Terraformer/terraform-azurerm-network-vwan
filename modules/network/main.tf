@@ -2,6 +2,7 @@ resource "azurerm_virtual_wan" "main" {
   name                = "vwan-${var.name}"
   resource_group_name = var.resource_group_name
   location            = var.location
+  tags                = var.tags
 }
 
 resource "azurerm_virtual_hub" "primary" {
@@ -10,6 +11,7 @@ resource "azurerm_virtual_hub" "primary" {
   location            = var.location
   virtual_wan_id      = azurerm_virtual_wan.main.id
   address_prefix      = var.primary_address_space
+  tags                = var.tags
 }
 
 resource "azurerm_virtual_hub" "additional_regions" {
@@ -21,5 +23,5 @@ resource "azurerm_virtual_hub" "additional_regions" {
   location            = each.key
   virtual_wan_id      = azurerm_virtual_wan.main.id
   address_prefix      = each.value
-
+  tags                = var.tags
 }
